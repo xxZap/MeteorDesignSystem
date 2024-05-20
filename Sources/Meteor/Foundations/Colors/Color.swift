@@ -45,7 +45,7 @@ extension Color {
     public static let mBackground = Color(#colorLiteral(red: 0.2509803922, green: 0.2392156863, blue: 0.3803921569, alpha: 1))
     public static let mBackgroundDark = Color(#colorLiteral(red: 0.1921568627, green: 0.1725490196, blue: 0.3137254902, alpha: 1))
     public static let mAccent = Color(#colorLiteral(red: 0.9019607843, green: 0.7647058824, blue: 0.5764705882, alpha: 1))
-    public static let mAccentDark = Color(#colorLiteral(red: 0.8039215686, green: 0.6470588235, blue: 0.4392156863, alpha: 1))
+    public static let mAccentDark = Color(#colorLiteral(red: 0.6386851616, green: 0.5271077181, blue: 0.3662458734, alpha: 1))
     public static let mLightText = Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
     public static let mDarkText = Color(#colorLiteral(red: 0.1254901961, green: 0.1254901961, blue: 0.1254901961, alpha: 1))
     public static let mDangerText = Color(#colorLiteral(red: 0.9937790742, green: 0.4848842662, blue: 0.6147140106, alpha: 1))
