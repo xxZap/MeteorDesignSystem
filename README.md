@@ -5,7 +5,9 @@
   <h1>Meteor</h1>
 </div>
 
+<div align="center">
 A comprehensive and cosmic Swift Package for iOS systems.
+</div>
 
 <p align="center">
     <img src="https://img.shields.io/badge/iOS-v17-blue"/>
