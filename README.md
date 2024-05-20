@@ -7,6 +7,15 @@
 
 A comprehensive and cosmic Swift Package for iOS systems.
 
+<p align="center">
+    <img src="https://img.shields.io/badge/iOS-v17-blue"/>
+    <img src="https://img.shields.io/badge/macOS-v14-purple"/>
+    <img src="https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat"/>
+    <a href="https://github.com/xxZap/MeteorDesignSystem/blob/main/LICENSE.txt">
+        <img src="https://img.shields.io/badge/license-apache 2.0-gold"/>
+    </a>
+</p>
+
 # Features
 
 ## Comprehensive
