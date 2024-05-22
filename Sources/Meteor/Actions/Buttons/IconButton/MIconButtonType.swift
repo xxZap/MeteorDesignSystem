@@ -8,11 +8,23 @@
 import SwiftUI
 
 public extension MIconButton {
+
+    /// The possible types an **MIconButton** can have.
+    ///
+    /// Each **MIconButtonType** has predefined and not-customizable:
+    ///
+    /// * background color
+    /// * icon color
+    /// * pressed color
+    /// * border color
+    /// * shadow color
+    /// * shadow radius
+    /// * loader color
     enum MIconButtonType {
         case primary
         case secondary
-        case accentGhost
-        case ghost
+        case primaryGhost
+        case secondaryGhost
 
         var backgroundColor: Color {
             switch self {
@@ -20,7 +32,7 @@ public extension MIconButton {
                 return .mAccent
             case .secondary:
                 return .mWhite
-            case .ghost, .accentGhost:
+            case .secondaryGhost, .primaryGhost:
                 return .mBackgroundDark.opacity(0)
             }
         }
@@ -31,9 +43,9 @@ public extension MIconButton {
                 return .mWhite
             case .secondary:
                 return .mBackground
-            case .accentGhost:
+            case .primaryGhost:
                 return .mAccent
-            case .ghost:
+            case .secondaryGhost:
                 return .mWhite
             }
         }
@@ -44,7 +56,7 @@ public extension MIconButton {
                 return .mAccentDark
             case .secondary:
                 return .mWhiteDark
-            case .ghost, .accentGhost:
+            case .secondaryGhost, .primaryGhost:
                 return .mBackgroundDark
             }
         }
@@ -55,7 +67,7 @@ public extension MIconButton {
                     .mWhite
             case .secondary:
                     .clear
-            case .ghost, .accentGhost:
+            case .secondaryGhost, .primaryGhost:
                     .clear
             }
         }
@@ -66,7 +78,7 @@ public extension MIconButton {
                     .clear
             case .secondary:
                     .black.opacity(0.4)
-            case .ghost, .accentGhost:
+            case .secondaryGhost, .primaryGhost:
                     .clear
             }
         }
@@ -77,7 +89,7 @@ public extension MIconButton {
                     0
             case .secondary:
                     8
-            case .ghost, .accentGhost:
+            case .secondaryGhost, .primaryGhost:
                     0
             }
         }
@@ -88,9 +100,9 @@ public extension MIconButton {
                     .white
             case .secondary:
                     .dark
-            case .accentGhost:
+            case .primaryGhost:
                     .accent
-            case .ghost:
+            case .secondaryGhost:
                     .white
             }
         }

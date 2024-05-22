@@ -5,9 +5,15 @@
 //  Created by Alessio Boerio on 21/04/24.
 //
 
-import SwiftUI
+import Foundation
 
 public extension MIconButton {
+
+    /// The possible sizes an **MIconButton** can have.
+    ///
+    /// Each **MIconButtonSize** has predefined and not-customizable:
+    /// - paddings
+    /// - loader size
     enum MIconButtonSize {
         case small
         case regular

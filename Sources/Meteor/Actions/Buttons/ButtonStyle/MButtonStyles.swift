@@ -26,9 +26,9 @@ public struct MPressable: ButtonStyle {
 
 public struct MButtonPressable: ButtonStyle {
 
-    public var type: MButtonType
+    public var type: MButton.MButtonType
 
-    public init(type: MButtonType) {
+    public init(type: MButton.MButtonType) {
         self.type = type
     }
 

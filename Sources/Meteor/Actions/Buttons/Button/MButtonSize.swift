@@ -7,34 +7,51 @@
 
 import Foundation
 
-public enum MButtonSize {
-    case small
-    case regular
+public extension MButton {
 
-    var horizontalPadding: CGFloat {
-        switch self {
-        case .small:
-            12
-        case .regular:
-            20
+    /// The possible sizes an **MButton** can have.
+    ///
+    /// Each **MButtonSize** has predefined and not-customizable:
+    /// - paddings
+    /// - min height value
+    enum MButtonSize {
+        case small
+        case regular
+
+        func toString() -> String {
+            switch self {
+            case .small:
+                "small"
+            case .regular:
+                "regular"
+            }
         }
-    }
 
-    var verticalPadding: CGFloat {
-        switch self {
-        case .small:
-            4
-        case .regular:
-            12
+        var horizontalPadding: CGFloat {
+            switch self {
+            case .small:
+                12
+            case .regular:
+                20
+            }
         }
-    }
 
-    var minHeight: CGFloat {
-        switch self {
-        case .small:
-            32
-        case .regular:
-            48
+        var verticalPadding: CGFloat {
+            switch self {
+            case .small:
+                4
+            case .regular:
+                12
+            }
+        }
+
+        var minHeight: CGFloat {
+            switch self {
+            case .small:
+                32
+            case .regular:
+                48
+            }
         }
     }
 }

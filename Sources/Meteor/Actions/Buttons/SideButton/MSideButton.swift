@@ -7,20 +7,34 @@
 
 import SwiftUI
 
+/// This **View** represents a Button that stays sticky to the lateral edges of the screen.
 public struct MSideButton: View {
-
+    
+    /// The side of the container this view should stay attached.
     public enum Side: Equatable {
         case attachedToTheLeft, attachedToTheRight
     }
-
-    public var onTap: (() -> Void)
+    
+    /// The image this button should show.
     public var image: Image
+    /// The side this view should stay attached to.
     public var side: Side
-
-    public init(onTap: @escaping () -> Void, image: Image, side: Side) {
-        self.onTap = onTap
+    /// The action to call when the button is touched.
+    public var onTap: (() -> Void)
+    
+    /// An **MSideButton** is a **Button** that can show an image and stay attached to an edge of the screen.
+    /// - Parameters:
+    ///   - image: the image this button should show.
+    ///   - side: the side this button should stay attached to.
+    ///   - onTap: the action to call when the button is touched.
+    public init(
+        image: Image,
+        side: Side,
+        onTap: @escaping () -> Void
+    ) {
         self.image = image
         self.side = side
+        self.onTap = onTap
     }
 
     public var body: some View {
@@ -47,13 +61,13 @@ public struct MSideButton: View {
     MPreviewContainer {
         Spacer()
         HStack {
-            MSideButton(onTap: { }, image: Image(systemName: "plus"), side: .attachedToTheLeft)
+            MSideButton(image: Image(systemName: "plus"), side: .attachedToTheLeft) { }
             Spacer()
         }
         Spacer()
         HStack {
             Spacer()
-            MSideButton(onTap: { }, image: Image(systemName: "plus"), side: .attachedToTheRight)
+            MSideButton(image: Image(systemName: "plus"), side: .attachedToTheRight) { }
         }
         Spacer()
     }
