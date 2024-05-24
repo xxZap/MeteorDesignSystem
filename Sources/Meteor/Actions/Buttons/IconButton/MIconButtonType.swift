@@ -32,7 +32,9 @@ public extension MIconButton {
                 return .mAccent
             case .secondary:
                 return .mWhite
-            case .secondaryGhost, .primaryGhost:
+            case .primaryGhost:
+                return .mBackgroundDark.opacity(0)
+            case .secondaryGhost:
                 return .mBackgroundDark.opacity(0)
             }
         }
@@ -40,7 +42,7 @@ public extension MIconButton {
         var iconColor: Color {
             switch self {
             case .primary:
-                return .mWhite
+                return .mBackground
             case .secondary:
                 return .mBackground
             case .primaryGhost:
@@ -56,7 +58,9 @@ public extension MIconButton {
                 return .mAccentDark
             case .secondary:
                 return .mWhiteDark
-            case .secondaryGhost, .primaryGhost:
+            case .primaryGhost:
+                return .mBackgroundDark
+            case .secondaryGhost:
                 return .mBackgroundDark
             }
         }
@@ -64,10 +68,12 @@ public extension MIconButton {
         var borderColor: Color {
             return switch self {
             case .primary:
-                    .mWhite
+                    .clear
             case .secondary:
                     .clear
-            case .secondaryGhost, .primaryGhost:
+            case .primaryGhost:
+                    .clear
+            case .secondaryGhost:
                     .clear
             }
         }
@@ -78,7 +84,9 @@ public extension MIconButton {
                     .clear
             case .secondary:
                     .black.opacity(0.4)
-            case .secondaryGhost, .primaryGhost:
+            case .primaryGhost:
+                    .clear
+            case .secondaryGhost:
                     .clear
             }
         }
@@ -86,18 +94,20 @@ public extension MIconButton {
         var shadowRadius: CGFloat {
             return switch self {
             case .primary:
-                    0
+                0
             case .secondary:
-                    8
-            case .secondaryGhost, .primaryGhost:
-                    0
+                8
+            case .primaryGhost:
+                0
+            case .secondaryGhost:
+                0
             }
         }
 
         var progressColor: MSpinner.MSpinnerColor {
             return switch self {
             case .primary:
-                    .white
+                    .dark
             case .secondary:
                     .dark
             case .primaryGhost:

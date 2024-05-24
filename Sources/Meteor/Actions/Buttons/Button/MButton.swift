@@ -76,7 +76,7 @@ public struct MButton: View {
 
                         if !title.isEmpty {
                             Text(title)
-                                .font(.body)
+                                .font(.body.weight(.medium))
                                 .foregroundStyle(type.textColor)
                                 .opacity(isLoading ? 0 : 1)
                         }

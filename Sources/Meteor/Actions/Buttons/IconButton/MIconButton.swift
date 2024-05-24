@@ -56,8 +56,8 @@ public struct MIconButton: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: size.iconSize, height: size.iconSize)
                         .foregroundStyle(type.iconColor)
+                        .frame(width: size.iconSize, height: size.iconSize)
                         .opacity(isLoading ? 0 : 1)
                 }
                 .padding(size.padding)
@@ -74,22 +74,22 @@ public struct MIconButton: View {
     MPreviewContainer {
         Spacer()
 
-        MIconButton(type: .primary,         size: .small,   image: Image(systemName: "square.and.arrow.up"),    loading: false) { }
-        MIconButton(type: .primary,         size: .regular, image: Image(systemName: "square.and.arrow.up"),    loading: false) { }
-        MIconButton(type: .primary,         size: .small,   image: Image(systemName: "square.and.arrow.up"),    loading: true) { }
-        MIconButton(type: .primary,         size: .regular, image: Image(systemName: "square.and.arrow.up"),    loading: true) { }
-        MIconButton(type: .secondary,       size: .small,   image: Image(systemName: "square.and.arrow.up"),    loading: false) { }
-        MIconButton(type: .secondary,       size: .regular, image: Image(systemName: "square.and.arrow.up"),    loading: false) { }
-        MIconButton(type: .secondary,       size: .small,   image: Image(systemName: "square.and.arrow.up"),    loading: true) { }
-        MIconButton(type: .secondary,       size: .regular, image: Image(systemName: "square.and.arrow.up"),    loading: true) { }
-        MIconButton(type: .primaryGhost,    size: .small,   image: Image(systemName: "square.and.arrow.up"),    loading: false) { }
-        MIconButton(type: .primaryGhost,    size: .regular, image: Image(systemName: "square.and.arrow.up"),    loading: false) { }
-        MIconButton(type: .primaryGhost,    size: .small,   image: Image(systemName: "square.and.arrow.up"),    loading: true) { }
-        MIconButton(type: .primaryGhost,    size: .regular, image: Image(systemName: "square.and.arrow.up"),    loading: true) { }
-        MIconButton(type: .secondaryGhost,  size: .small,   image: Image(systemName: "square.and.arrow.up"),    loading: false) { }
-        MIconButton(type: .secondaryGhost,  size: .regular, image: Image(systemName: "square.and.arrow.up"),    loading: false) { }
-        MIconButton(type: .secondaryGhost,  size: .small,   image: Image(systemName: "square.and.arrow.up"),    loading: true) { }
-        MIconButton(type: .secondaryGhost,  size: .regular, image: Image(systemName: "square.and.arrow.up"),    loading: true) { }
+        MIconButton(type: .primary,         size: .small,   image: Image(systemName: "heart"),    loading: false) { }
+        MIconButton(type: .primary,         size: .regular, image: Image(systemName: "heart"),    loading: false) { }
+        MIconButton(type: .primary,         size: .small,   image: Image(systemName: "heart"),    loading: true) { }
+        MIconButton(type: .primary,         size: .regular, image: Image(systemName: "heart"),    loading: true) { }
+        MIconButton(type: .secondary,       size: .small,   image: Image(systemName: "heart"),    loading: false) { }
+        MIconButton(type: .secondary,       size: .regular, image: Image(systemName: "heart"),    loading: false) { }
+        MIconButton(type: .secondary,       size: .small,   image: Image(systemName: "heart"),    loading: true) { }
+        MIconButton(type: .secondary,       size: .regular, image: Image(systemName: "heart"),    loading: true) { }
+        MIconButton(type: .primaryGhost,    size: .small,   image: Image(systemName: "heart"),    loading: false) { }
+        MIconButton(type: .primaryGhost,    size: .regular, image: Image(systemName: "heart"),    loading: false) { }
+        MIconButton(type: .primaryGhost,    size: .small,   image: Image(systemName: "heart"),    loading: true) { }
+        MIconButton(type: .primaryGhost,    size: .regular, image: Image(systemName: "heart"),    loading: true) { }
+        MIconButton(type: .secondaryGhost,  size: .small,   image: Image(systemName: "heart"),    loading: false) { }
+        MIconButton(type: .secondaryGhost,  size: .regular, image: Image(systemName: "heart"),    loading: false) { }
+        MIconButton(type: .secondaryGhost,  size: .small,   image: Image(systemName: "heart"),    loading: true) { }
+        MIconButton(type: .secondaryGhost,  size: .regular, image: Image(systemName: "heart"),    loading: true) { }
 
         Spacer()
     }
