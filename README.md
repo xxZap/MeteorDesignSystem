@@ -22,7 +22,7 @@ A comprehensive and cosmic Swift Package for iOS systems.
 
 ## Comprehensive
 
-With more than 10 crafted components that you can use out of the box.
+Composed of a total of 11 crafted components that you can use out of the box.
 
 ## SwiftUI friendly
 
@@ -35,6 +35,7 @@ All components are written in SwiftUI.
   - Button
   - IconButton
   - SideButton
+- ListItem
 
 ### Foundations
 - Animations
