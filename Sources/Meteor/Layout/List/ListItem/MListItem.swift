@@ -47,14 +47,14 @@ public struct MListItem: View {
         }
         .buttonStyle(.plain)
         .listRowBackground(Color.mBackgroundLight)
-        .listRowSeparatorTint(Color.mLightText)
+        .listRowSeparatorTint(Color.mBackgroundDark)
     }
 }
 
 #if DEBUG
 #Preview {
     MPreviewContainer {
-        List {
+        MList {
             Section {
                 MListItem(
                     text: "Some text",
@@ -74,7 +74,6 @@ public struct MListItem: View {
                 ) { }
             }
         }
-        .scrollContentBackground(.hidden)
     }
 }
 #endif
