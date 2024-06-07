@@ -1,5 +1,5 @@
 //
-//  InfoBox.swift
+//  MInfoBox.swift
 //
 //
 //  Created by Alessio Boerio on 16/05/24.
