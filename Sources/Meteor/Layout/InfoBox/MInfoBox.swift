@@ -24,6 +24,7 @@ public struct MInfoBox: View {
     }
 
     public var body: some View {
+        let borderWidth: CGFloat = 1
         HStack(spacing: 0) {
             image
                 .foregroundStyle(Color.mAccent)
@@ -39,16 +40,20 @@ public struct MInfoBox: View {
         }
         .background(Color.mBackgroundDark)
         .clipShape(.rect(cornerRadius: 8))
-        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.mAccentDark, lineWidth: 1))
+        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.mAccentDark, lineWidth: borderWidth))
+        .padding(borderWidth/2)
     }
 }
 
 #if DEBUG
 #Preview {
-    MInfoBox(
-        image: Image(systemName: "exclamationmark.bubble"),
-        text: "Example message",
-        color: Color.mBackgroundDark
-    )
+    MPreviewContainer {
+        MInfoBox(
+            image: Image(systemName: "exclamationmark.bubble"),
+            text: "Example message",
+            color: Color.mBackgroundDark
+        )
+        .padding(8)
+    }
 }
 #endif
