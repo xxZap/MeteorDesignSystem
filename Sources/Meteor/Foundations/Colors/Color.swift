@@ -82,7 +82,7 @@ extension Color {
     public static let mAccent = Color(#colorLiteral(red: 0.937254902, green: 0.7333333333, blue: 0.4901960784, alpha: 1))
     public static let mAccentDark = Color(#colorLiteral(red: 0.6588235294, green: 0.5176470588, blue: 0.3411764706, alpha: 1))
     public static let mLightText = Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
-    public static let mMediumText = Color(#colorLiteral(red: 0.7309736395, green: 0.6968537415, blue: 0.7936065051, alpha: 1))
+    public static let mMediumText = Color(#colorLiteral(red: 0.6240167943, green: 0.5996492347, blue: 0.704772534, alpha: 1))
     public static let mDarkText = Color(#colorLiteral(red: 0.1921568627, green: 0.1725490196, blue: 0.3137254902, alpha: 1))
     public static let mDangerText = Color(#colorLiteral(red: 0.9921568627, green: 0.4862745098, blue: 0.6156862745, alpha: 1))
     public static let mBorder = Color(#colorLiteral(red: 0.3960784314, green: 0.3882352941, blue: 0.5333333333, alpha: 1))

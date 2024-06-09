@@ -58,7 +58,8 @@ public struct MTextField: View {
             }
             TextField("", text: $text)
                 .placeholder(when: text.isEmpty) {
-                    Text(placeholder).foregroundColor(Color.mLightText.opacity(0.4))
+                    Text(placeholder)
+                        .foregroundColor(Color.mMediumText)
                 }
                 .padding(16)
                 .foregroundStyle(Color.mLightText)

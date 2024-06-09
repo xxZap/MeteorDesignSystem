@@ -11,6 +11,11 @@ public struct MMenuPickerElement: Hashable {
     public var title: String
     public var image: Image?
 
+    public init(title: String, image: Image? = nil) {
+        self.title = title
+        self.image = image
+    }
+
     public func hash(into hasher: inout Hasher) {
         hasher.combine(title)
     }
@@ -39,7 +44,7 @@ public struct MMenuPicker: View {
     }
 
     public var body: some View {
-        HStack(spacing: 8) {
+        VStack(spacing: 4) {
             if !title.isEmpty {
                 HStack(alignment: .center, spacing: 16) {
                     Group {
@@ -51,7 +56,7 @@ public struct MMenuPicker: View {
                     }
                     .font(.callout)
                     .fixedSize()
-                    .frame(minHeight: 24, alignment: .leading)
+                    .frame(maxWidth: .infinity, minHeight: 24, alignment: .leading)
 
                     if let interaction = onTooltipTap {
                         Button {
@@ -64,28 +69,34 @@ public struct MMenuPicker: View {
                         .tint(Color.mAccent)
                     }
                 }
+                .padding(.horizontal, 16)
             }
             Picker(title, selection: $selectedElement) {
                 ForEach(elements, id: \.self) { element in
                     if let element {
                         HStack(spacing: 8) {
                             Text(element.title)
+                                .frame(maxWidth: .infinity)
+                                .contentShape(Rectangle())
+                                .border(.green)
                             element.image
                         }
                         .tag(element.title)
                     } else {
                         Text("-")
+                            .frame(maxWidth: .infinity)
+                            .contentShape(Rectangle())
                             .tag("-")
                     }
                 }
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .contentShape(Rectangle())
             .pickerStyle(.menu)
-            .tint(Color.mAccent)
             .padding(16)
             .background(Color.mBackgroundDark)
             .clipShape(.capsule)
-            .tint(Color.mAccent)
+            .tint(selectedElement == nil ? Color.mMediumText : Color.mLightText)
         }
     }
 }
@@ -106,9 +117,10 @@ public struct MMenuPicker: View {
                 selectedElement: $selectedElement,
                 elements: elements,
                 title: "Title",
-                isMandatory: true,
-                onTooltipTap: nil
-            )
+                isMandatory: true
+            ) {
+                
+            }
         }
     }
 
